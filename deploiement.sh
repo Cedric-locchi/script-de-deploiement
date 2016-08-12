@@ -72,10 +72,12 @@ deploie() {
         npmInstallAndBuild
     fi
 
-    echo
+    echo "$(tput setaf 1) $(tput setab 7)"
+    echo "=================================================================="
     echo " $(tput setaf 1) $(tput setab 7) script $1 terminé $(tput sgr 0)";
-    echo
-    
+    echo "=================================================================="
+    echo "$(tput sgr 0)"
+
 }
 
 
@@ -85,14 +87,17 @@ deploie() {
 read -r -p "choisir le dossier a utiliser pour la mise a jour ($(tput setab 7) all $(tput sgr 0) pour tous mettre a jour) " folder
 
 if [ $folder = "all" ]; then
+
     deploie commerce
     deploie informatique
     deploie telecom
     deploie entreprise
 
-    echo
-    echo " $(tput setaf 1) $(tput setab 7) tout les srcipts se sont bien exécuté $(tput sgr 0)"
-    echo
+    echo "$(tput setaf 1) $(tput setab 7)"
+    echo "========================================"
+    echo "  tout les srcipts se sont bien exécuté"
+    echo "========================================"
+    echo "$(tput sgr 0)"
 
 else
     deploie $folder 
