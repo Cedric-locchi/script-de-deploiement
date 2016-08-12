@@ -80,11 +80,9 @@ deploie() {
 #===  LANCEMENT DU SCRIPT  =====================================================
 #===============================================================================
 
-
 read -r -p "choisir le dossier a utiliser pour la mise a jour (all pour tous mettre a jour) " folder
 
-if [ $folder = "all" ]; 
-then
+if [ $folder = "all" ]; then
     deploie commerce
     deploie informatique
     deploie telecom
@@ -92,4 +90,4 @@ then
 
 else
     deploie $folder 
-fi                                                                                                        7,27         Tout
+fi
