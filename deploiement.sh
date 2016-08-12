@@ -88,8 +88,8 @@ then
     deploie commerce
     deploie informatique
     deploie telecom
-    deploie entreprise;
+    deploie entreprise
 
 else
     deploie $folder 
-if                                                                                                         7,27         Tout
+fi                                                                                                        7,27         Tout
