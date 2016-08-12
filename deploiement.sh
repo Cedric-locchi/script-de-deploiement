@@ -72,7 +72,10 @@ deploie() {
         npmInstallAndBuild
     fi
 
+    echo
     echo " $(tput setaf 1) $(tput setab 7) script $1 terminé $(tput sgr 0)";
+    echo
+    
 }
 
 
@@ -87,7 +90,9 @@ if [ $folder = "all" ]; then
     deploie telecom
     deploie entreprise
 
+    echo
     echo " $(tput setaf 1) $(tput setab 7) tout les srcipts se sont bien exécuté $(tput sgr 0)"
+    echo
 
 else
     deploie $folder 
