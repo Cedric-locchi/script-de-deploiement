@@ -1,4 +1,3 @@
-                                                                                                  1,1          Tout
 #!/bin/sh -e
 
 #===============================================================================
@@ -73,7 +72,7 @@ deploie() {
         npmInstallAndBuild
     fi
 
-    echo "script $1 terminé";
+    echo " $(tput setab 7) script $1 terminé";
 }
 
 
@@ -87,6 +86,8 @@ if [ $folder = "all" ]; then
     deploie informatique
     deploie telecom
     deploie entreprise
+
+    echo " $(tput setab 7) tout les srcipts se sont bien exécuté"
 
 else
     deploie $folder 
