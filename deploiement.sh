@@ -73,9 +73,9 @@ deploie() {
     fi
 
     echo "$(tput setaf 1) $(tput setab 7)"
-    echo "===================="
+    echo "=============================="
     echo " script $1 terminé "
-    echo "===================="
+    echo "=============================="
     echo "$(tput sgr 0)"
 
 }
@@ -93,9 +93,9 @@ if [ $folder = "all" ]; then
     deploie entreprise
 
     echo "$(tput setaf 1) $(tput setab 7)"
-    echo "========================================"
+    echo "=========================================="
     echo "  tout les srcipts se sont bien exécuté"
-    echo "========================================"
+    echo "=========================================="
     echo "$(tput sgr 0)"
 
 else
