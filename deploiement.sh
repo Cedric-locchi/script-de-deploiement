@@ -28,10 +28,8 @@
 #===============================================================================
 
 moveToFolder(){
-
     cd /home/adigit/$1
     git pull origin master
-
 }
 
 #===  FUNCTION  ================================================================
@@ -42,10 +40,8 @@ moveToFolder(){
 #===============================================================================
 
 npmInstallAndBuild(){
-
     npm install
     gulp build
-
 }
 
 #===  FUNCTION  ================================================================
@@ -80,9 +76,20 @@ deploie() {
     echo "script $1 terminé";
 }
 
-read -r -p "choisir le dossier a utiliser pour la mise a jour (all pour tous mettre a jour)" folder
 
 #===  LANCEMENT DU SCRIPT  =====================================================
 #===============================================================================
 
-deploie $folder                                                                                                          7,27         Tout
+
+read -r -p "choisir le dossier a utiliser pour la mise a jour (all pour tous mettre a jour) " folder
+
+if [ $folder = "all" ]; 
+then
+    deploie commerce
+    deploie informatique
+    deploie telecom
+    deploie entreprise;
+
+else
+    deploie $folder 
+if                                                                                                         7,27         Tout
