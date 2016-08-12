@@ -29,9 +29,7 @@
 
 moveToFolder(){
 
-    folder = $1
-
-    cd /home/adigit/$folder
+    cd /home/adigit/$1
     git pull origin master
 
 }
@@ -47,7 +45,7 @@ npmInstallAndBuild(){
 
     npm install
     gulp build
-    
+
 }
 
 #===  FUNCTION  ================================================================
@@ -59,11 +57,9 @@ npmInstallAndBuild(){
 
 deploie() {
 
-    folder = $1
+    moveToFolder $1
 
-    moveToFolder folder
-
-    if [ -d "/home/adigit/$folder/node_modules" ]; then
+    if [ -d "/home/adigit/$1/node_modules" ]; then
 
         read -r -p "lancer un npm install quand même? [Y/n] " input
 
@@ -81,7 +77,7 @@ deploie() {
         npmInstallAndBuild
     fi
 
-    echo "script $folder terminé";
+    echo "script $1 terminé";
 }
 
 read -r -p "choisir le dossier a utiliser pour la mise a jour (all pour tous mettre a jour)" folder
